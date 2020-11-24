@@ -1,6 +1,8 @@
 #define emailTam 30;
 
-typedef struct {
-	int inicio;
+typedef struct EmailListaCirc {
 	char endereco [emailTam];
-}emailFilaCirc;
+	struct EmailListaCirc seguinte;
+} Email;
+
+typedef struct 
