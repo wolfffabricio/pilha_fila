@@ -1,13 +1,15 @@
-typedef struct EmailEncad {
+typedef struct Email {
 	char endereco [64];
 	struct EmailEncad seguinte;
 } Email;
 
-typedef struct FilaEncadeada {
+typedef struct Fila {
 	Email inicio;
 	Email fim;
 	int tamanho;
 } Fila;
+
+Email* criaEmail(char endereco[64]);
 
 Fila* criaFila ();
 
@@ -15,8 +17,8 @@ void insereEmail (Email* email, Fila* fila);
 
 void excluiEmail (Email* email, Fila* fila);
 
-Email* consultaProxEmail (Fila* fila);
+char* consultaProxEmail (Fila* fila);
 
-void apagaLista (Lista* lista);
+void apagaFila (Fila* fila);
 
 
