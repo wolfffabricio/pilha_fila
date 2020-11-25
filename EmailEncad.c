@@ -48,7 +48,7 @@ void insereEmail (Email* email, Fila* fila) {
 }
 
 void excluiEmail (Email* email, Fila* fila) {
-	fila->inicio = fila->incio->seguinte;
+	fila->inicio = fila->inicio->seguinte;
 	fila->tamanho--;
 	return;	
 }
@@ -56,12 +56,10 @@ void excluiEmail (Email* email, Fila* fila) {
 char* consultaProxEmail (Fila* fila) {
 	char endereco[64]; 
 	if(fila->inicio == NULL) {
-		strcpy (endereco, "Nao ha email na fila!");
-		return endereco;
+		return "Nao ha email na fila!";
 	}
-	
-	strcpy(endereco, fila->inicio->endereco);
-	return endereco;
+
+	return fila->inicio->endereco;
 }
 
 void apagaLista (Fila* fila) {
