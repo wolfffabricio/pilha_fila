@@ -1,0 +1,14 @@
+# Executaveis
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+*.layout
+
+# Arquivos temporários
+EmailFilaCircular
+main
+tempCodeRunnerFile
+pilha_fila.dev
