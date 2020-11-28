@@ -18,32 +18,33 @@ IMPLEMENTE O PROBLEMA EM C USANDO AMBAS AS FORMAS (OU IMPLEMENTE UM PROBLEMA PAR
 -LISTA ENCADEADA (CRIAR UM TAD FILA COM AS FUN��ES DEFINIDAS ANTERIORMENTE) 
 */
 
-void EmailFilaCircularTestes() {
-	EmailFilaCircular* fila = criar();
-
-	inserir(fila, "example@live.com");
-	inserir(fila, "example2@live.com");
-	inserir(fila, "example3@live.com");
-	inserir(fila, "example4@live.com");
-	inserir(fila, "example5@live.com");
-
-	imprimir(fila);
-
-	remover(fila);
-	
-	imprimir(fila);
-
-	inserir(fila, "example55@live.com");
-
-	imprimir(fila);
-
-	remover(fila);
-
-	imprimir(fila);
-}
-
 int main(int argc, char *argv[]) {
-	EmailFilaCircularTestes();
+	char tituloMenuContainerVetor[60] = "\n(1) - Pilha de container (Vetor)";
+	char tituloMenuContainerListaEncadeada[60] = "\n(2) - Pilha de container (Lista Encadeada)";
+	char tituloMenuFilaCircular[60] = "\n(3) - Fila de email (Fila Circular)";
+	char tituloMenuFilaListaEncadeada[60] = "\n(4) - Fila de email (Lista Encadeada)";
 
+	int menu = 0;
+
+  printf("%s", tituloMenuContainerVetor);
+  printf("%s", tituloMenuContainerListaEncadeada);
+  printf("%s", tituloMenuFilaCircular);
+  printf("%s", tituloMenuFilaListaEncadeada);
+
+  printf("\n\nEscolha uma opção: ");
+  scanf("%d" , &menu);
+
+  switch (menu) {
+
+    case 1: break;
+
+    case 2: break;
+
+    case 3: menuEmailFilaCircular(); break;
+    
+    case 4: break;
+
+  }
+    
 	return 0;
 }
